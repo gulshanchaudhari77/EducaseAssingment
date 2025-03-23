@@ -1,23 +1,18 @@
-// LoginPage.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function LoginPage() {
-  // State to handle email and password inputs
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // Handle form submission
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent page refresh
+    e.preventDefault(); 
 
-    // Store email and password in localStorage
     localStorage.setItem('email', email);
     localStorage.setItem('password', password);
 
     alert('Data stored in localStorage!');
 
-    // You could redirect or perform another action here after storing data
   };
 
   return (
@@ -35,8 +30,8 @@ function LoginPage() {
             <input
               type="email"
               id="email"
-              value={email} // Controlled input
-              onChange={(e) => setEmail(e.target.value)} // Update state on input
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
               placeholder="Enter email address"
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
@@ -49,8 +44,8 @@ function LoginPage() {
             <input
               type="password"
               id="password"
-              value={password} // Controlled input
-              onChange={(e) => setPassword(e.target.value)} // Update state on input
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)} 
               placeholder="Enter password"
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
             />

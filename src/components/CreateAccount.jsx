@@ -8,10 +8,10 @@ function CreateAccount() {
     email: '',
     password: '',
     companyName: '',
-    isAgency: 'Yes', // Default radio button selection
+    isAgency: 'Yes', 
   });
 
-  const navigate = useNavigate(); // Used for redirection
+  const navigate = useNavigate(); 
 
 
   const handleChange = (e) => {
@@ -21,7 +21,7 @@ function CreateAccount() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Store the form data in localStorage
+    
     localStorage.setItem('popxAccountData', JSON.stringify(formData));
     alert('Account data saved to localStorage!');
     navigate('/login')

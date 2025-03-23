@@ -7,7 +7,7 @@ function AccountSettings() {
   });
 
   useEffect(() => {
-    // Retrieve user data from localStorage when the component mounts
+    //  user data from localStorage backend use nhi kr to us ke liye
     const storedData = JSON.parse(localStorage.getItem('popxAccountData'));
     if (storedData) {
       setUserData({
